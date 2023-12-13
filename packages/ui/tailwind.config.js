@@ -1,0 +1,6 @@
+/** @type {import('tailwindcss').Config} */
+const sharedConfig = require("@repo/tailwind/tailwind.config.js");
+export default {
+  ...sharedConfig,
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+};

@@ -1,0 +1,8 @@
+{
+    "name": "@repo/tailwind",
+    "version": "1.0.0",
+    "description": "this is a tailwind css package",
+    "files": [
+        "tailwind.config.js"
+    ]
+}
