@@ -2,5 +2,5 @@
 const sharedConfig = require("@repo/tailwind/tailwind.config.js");
 export default {
   ...sharedConfig,
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: ["./src/**/*.{js,ts,jsx,tsx}"],
 };
