@@ -1,5 +1,15 @@
-const index = () => {
-  return <button type="button">Click Here</button>;
+import { ComponentProps } from "react";
+
+type ButtonProps = ComponentProps<"button"> & {
+  variant?: "solid" | "outline" | "ghost";
 };
 
-export default index;
+const Button = ({ ...props }: ButtonProps) => {
+  return (
+    <button {...props} type="button" className="text-blue-500">
+      {props.children}
+    </button>
+  );
+};
+
+export default Button;
