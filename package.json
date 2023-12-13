@@ -5,27 +5,15 @@
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "@storybook/addon-essentials": "7.6.4",
-    "@storybook/addon-interactions": "7.6.4",
-    "@storybook/addon-links": "7.6.4",
-    "@storybook/addon-onboarding": "1.0.10",
-    "@storybook/blocks": "7.6.4",
-    "@storybook/react": "7.6.4",
-    "@storybook/react-vite": "7.6.4",
-    "@storybook/test": "7.6.4",
-    "eslint-plugin-storybook": "^0.6.15",
     "prettier": "^3.1.0",
     "prop-types": "15.8.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "storybook": "^7.6.4",
     "turbo": "latest",
     "vite-tsconfig-paths": "^4.2.2"
   },

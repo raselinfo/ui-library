@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+
 import Button from ".";
 
 const meta: Meta<typeof Button> = {
@@ -7,30 +8,16 @@ const meta: Meta<typeof Button> = {
   parameters: {
     layout: "centered",
   },
-  tags: ["autodocs"],
+  // tags: ["autodocs"],
 };
 
 export default meta;
 
-type Story = StoryObj<typeof meta>;
+type story = StoryObj<typeof meta>;
 
-export const Solid: Story = {
+export const Solid: story = {
   args: {
     variant: "solid",
-    children: "Button",
-  },
-};
-
-export const Outline: Story = {
-  args: {
-    variant: "outline",
-    children: "Button",
-  },
-};
-
-export const Ghost: Story = {
-  args: {
-    variant: "ghost",
-    children: "Button",
+    children: "Solid Button",
   },
 };

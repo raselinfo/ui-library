@@ -1,0 +1,70 @@
+import { Canvas, Meta } from "@storybook/blocks";
+
+import * as ButtonStories from "./index.stories";
+
+<Meta title="Component/Button" of={ButtonStories} />
+
+## Props
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Default</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>**children**</td>
+    <td>`React.ReactNode`</td>
+    <td>-</td>
+    <td>Button content</td>
+  </tr>
+  <tr>
+    <td>**className**</td>
+    <td>`string`</td>
+    <td>-</td>
+    <td>Additional CSS classes to apply to the Box.</td>
+  </tr>
+  <tr>
+    <td>**style**</td>
+    <td>`React.CSSProperties`</td>
+    <td>-</td>
+    <td>Additional CSS styles to apply to the Box.</td>
+  </tr>
+  <tr>
+    <td>**as**</td>
+    <td>`enum`</td>
+    <td>`"div"`</td>
+    <td>
+      Component used for the root node <br /> **Possible values are:** `keyOf
+      JSX.IntrinsicElements` such as `div`, `span`, `section`, `address` etc.
+    </td>
+  </tr>
+  <tr>
+    <td>**pl**</td>
+    <td>`enum`</td>
+    <td>`"0"`</td>
+    <td>
+      Defines the `padding-left` of the Box. <br /> Please see
+      [Theme/Spacing](https://spark-ui-two.vercel.app/?path=/docs/theme-spacing--docs)
+      for the possible values.
+    </td>
+  </tr>
+</table>
+
+> The `ref` is forwarded to the root element.
+
+## Solid Button
+
+<Canvas
+  of={ButtonStories.Solid}
+  source={{
+    code: `
+import Button from ".";
+
+export const Component=()=>{
+   <Button>Button</Button>
+};
+    `,
+  }}
+/>

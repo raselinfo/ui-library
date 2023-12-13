@@ -1,6 +1,14 @@
+import colors from "tailwindcss/colors";
+
 /** @type {import('tailwindcss').Config} */
-const sharedConfig = require("@repo/tailwind/tailwind.config.js");
 export default {
-  ...sharedConfig,
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {
+      colors: {
+        primary: colors.blue,
+      },
+    },
+  },
+  plugins: [],
 };
