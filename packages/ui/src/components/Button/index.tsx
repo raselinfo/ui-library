@@ -1,6 +1,6 @@
 import { cn } from "@/utils";
 import { cva, VariantProps } from "class-variance-authority";
-import { ComponentProps } from "react";
+import { ComponentProps, forwardRef } from "react";
 /* The `cva` function is used to create a variant object that defines different styles for a component
 based on different variants. In this case, it is used to define the styles for a button component. 
 */
@@ -57,14 +57,10 @@ const buttonStyles = cva(
 
 type ButtonProps = ComponentProps<"button"> & VariantProps<typeof buttonStyles>;
 
-export const Button = ({
-  variant,
-  size,
-  colorScheme,
-  className,
-  ...props
-}: ButtonProps) => {
-  const classes = cn(buttonStyles({ variant, size, colorScheme, className }));
-  // classes output : w-full rounded-md font-semibold focus:outline-none disabled:cursor-not-allowed px-4 py-2 text-base text-white bg-primary-500 hover:bg-primary-600
-  return <button {...props} type="button" className={classes} />;
-};
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ variant, size, colorScheme, className, ...props }: ButtonProps, ref) => {
+    const classes = cn(buttonStyles({ variant, size, colorScheme, className }));
+    // classes output : w-full rounded-md font-semibold focus:outline-none disabled:cursor-not-allowed px-4 py-2 text-base text-white bg-primary-500 hover:bg-primary-600
+    return <button ref={ref} {...props} type="button" className={classes} />;
+  }
+);
