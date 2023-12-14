@@ -2,69 +2,165 @@ import { Canvas, Meta } from "@storybook/blocks";
 
 import * as ButtonStories from "./index.stories";
 
-<Meta title="Component/Button" of={ButtonStories} />
+    <Meta title="Component/Button" of={ButtonStories} />
+
+# Button
+
+Use the Button component to render a button element. The Button component is a styled version of the HTML `button` element.
 
 ## Props
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Type</th>
-    <th>Default</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>**children**</td>
+    <table>
+          <thead>
+              <tr>
+                  <th>Name</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+              </tr>
+              </thead>
+
+  <tbody>
+
+          <tr>
+                  <td>**children**</td>
     <td>`React.ReactNode`</td>
     <td>-</td>
     <td>Button content</td>
-  </tr>
-  <tr>
-    <td>**className**</td>
-    <td>`string`</td>
-    <td>-</td>
-    <td>Additional CSS classes to apply to the Box.</td>
-  </tr>
-  <tr>
-    <td>**style**</td>
-    <td>`React.CSSProperties`</td>
-    <td>-</td>
-    <td>Additional CSS styles to apply to the Box.</td>
-  </tr>
-  <tr>
-    <td>**as**</td>
-    <td>`enum`</td>
-    <td>`"div"`</td>
-    <td>
-      Component used for the root node <br /> **Possible values are:** `keyOf
-      JSX.IntrinsicElements` such as `div`, `span`, `section`, `address` etc.
-    </td>
-  </tr>
-  <tr>
-    <td>**pl**</td>
-    <td>`enum`</td>
-    <td>`"0"`</td>
-    <td>
-      Defines the `padding-left` of the Box. <br /> Please see
-      [Theme/Spacing](https://spark-ui-two.vercel.app/?path=/docs/theme-spacing--docs)
-      for the possible values.
-    </td>
-  </tr>
+            </tr>
+
+{" "}
+
+<tr>
+  <td>**className**</td>
+  <td>`string`</td>
+  <td>-</td>
+  <td>Additional Tailwind CSS classes to apply to the Button.</td>
+</tr>
+<tr>
+  <td>**style**</td>
+  <td>`React.CSSProperties`</td>
+  <td>-</td>
+  <td>Additional CSS styles to apply to the Box.</td>
+</tr>
+
+<tr>
+  <td>**colorScheme**</td>
+  <td>`string`</td>
+  <td>`primary`</td>
+  <td>
+    Define the Color Scheme of the Button. <br /> **Possible values are:**
+    `primary`, `secondary`, `success`, `danger`, `warning`, `info`, `light`,
+    `dark`, `link`{" "}
+  </td>
+</tr>
+
+<tr>
+  <td>**size**</td>
+  <td>`string`</td>
+  <td>`md`</td>
+  <td>
+    Define the Size of the Button. <br /> **Possible values are:** `sm`, `md`,
+    `lg`{" "}
+  </td>
+</tr>
+
+<tr>
+  <td>**vriant**</td>
+  <td>`string`</td>
+  <td>`solid`</td>
+  <td>Define the Variant of the Button. <br/> **Possible values are:** `solid`, `outline`, `ghost`{" "} </td>
+</tr>
+</tbody>
 </table>
 
 > The `ref` is forwarded to the root element.
 
-## Solid Button
+## Default Button
 
-<Canvas
-  of={ButtonStories.Solid}
-  source={{
-    code: `
-import Button from ".";
+<Canvas of={ButtonStories.Solid} source={{
+code: `
+import { Button } from "@open/surface-ui";
 
 export const Component=()=>{
-   <Button>Button</Button>
+  return <Button>Default</Button>
 };
-    `,
-  }}
+`,
+}}
 />
+
+## Solid Button
+
+<Canvas of={ButtonStories.Solid} source={{
+code: `
+import { Button } from "@open/surface-ui";
+
+export const Component=()=>{
+  return <Button variant="solid">Solid</Button>
+};
+`,
+}}
+/>
+
+## Outline Button
+
+<Canvas of={ButtonStories.Outline} source={{
+    code: `
+import {Button} from "@open/surface-ui";
+
+export const Component=()=>{
+   return <Button variant="outline">Outline</Button>
+}
+    
+    `
+}}/>
+
+## Ghost Button
+
+<Canvas of={ButtonStories.Ghost} source={{
+    code: `
+import {Button} from "@open/surface-ui";
+
+export const Component=()=>{
+    return <Button variant="ghost">Ghost</Button>
+}
+    `
+}} />
+
+# Sizes
+
+## Samll Size
+
+<Canvas of={ButtonStories.Small} source={{
+    code:`
+improt {Button} from "@open/surface-ui";
+
+export const Component=()=>{
+    return <Button size="sm">Small</Button>
+}
+    `
+}} />
+
+## Medium Size
+
+<Canvas of={ButtonStories.Medium} source={{
+    code:`
+import {Button} from "@open/surface-ui";
+
+export const Component=()=>{
+    return <Button size="md">Medium</Button>
+}
+    `
+}}/>
+
+## Large Size
+
+<Canvas of={ButtonStories.Large} source={{
+    code:`
+import {Button} from "@open/surface-ui";
+
+export const Component=()=>{
+    return <Button size="lg">Large</Button>
+}
+    `
+}}/>
