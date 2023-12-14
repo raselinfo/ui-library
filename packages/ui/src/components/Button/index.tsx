@@ -58,9 +58,9 @@ const buttonStyles = cva(
 type ButtonProps = ComponentProps<"button"> & VariantProps<typeof buttonStyles>;
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ variant, size, colorScheme, className, ...props }: ButtonProps, ref) => {
+  ({ variant, size, colorScheme, className, ...props }, ref) => {
     const classes = cn(buttonStyles({ variant, size, colorScheme, className }));
     // classes output : w-full rounded-md font-semibold focus:outline-none disabled:cursor-not-allowed px-4 py-2 text-base text-white bg-primary-500 hover:bg-primary-600
-    return <button ref={ref} {...props} type="button" className={classes} />;
+    return <button ref={ref} type="button" className={classes} {...props} />;
   }
 );

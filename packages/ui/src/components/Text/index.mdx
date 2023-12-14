@@ -1,0 +1,325 @@
+import { Meta, Canvas } from "@storybook/blocks";
+
+import * as TextStories from "./index.stories";
+
+<Meta title="Components/Text" of={TextStories} />
+
+# Text
+
+Use the Text component to render text. It supports all HTML5 text elements. It also supports the following custom elements: `span`, `strong`, `em`, `small`, `mark`, `del`, `ins`, `sub`, `sup`, `code`, `kbd`, `samp`, `var`, `abbr`, `address`, `cite`, `bdo`, `bdi`, `time`, `dfn`, `q`, `blockquote`, `pre`, `ul`, `ol`, `li`, `dl`, `dt`, `dd`, `div`, `p`, `a`, `h1`, `h2`, `h3`, `h4`, `h5`, `h6`.
+
+## Props
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+    <td>children</td>
+    <td>`React.ReactNode`</td>
+    <td>`-`</td>
+    <td>The Children Of the Text</td>
+</tr>
+<tr>
+    <td>as</td>
+    <td>`enum`</td>
+    <td>`span`</td>
+    <td>Component used for the root node <br/> **Possible values are:** `keyof JSX.IntrinsicElements` such as `span`, `strong`, `em`, `small`, `mark`, `del`, `ins`, `sub`, `sup`, `code`, `kbd`, `samp`, `var`, `abbr`, `address`, `cite`, `bdo`, `bdi`, `time`, `dfn`, `q`, `blockquote`, `pre`, `ul`, `ol`, `li`, `dl`, `dt`, `dd`, `div`, `p`, `a`, `h1`, `h2`, `h3`, `h4`, `h5`, `h6`. </td>
+</tr>
+<tr>
+    <td>size</td>
+    <td>`string`</td>
+    <td>`base`</td>
+    <td>The size of the Text. <br/> **Possible values are:** `sm`, `base`,  `lg`, `xl`, `2xl`, `3xl` </td>
+</tr>
+
+<tr>
+  <td>width</td>
+  <td>`string`</td>
+  <td>`-`</td>
+  <td>
+    The width of the Text. <br /> **Possible values are:** `thin`, `normal`,
+    `medium`, `semibold`, `bold`, `black`{" "}
+  </td>
+</tr>
+
+<tr>
+  <td>align</td>
+  <td>`string`</td>
+  <td>`left`</td>
+  <td>
+    The alignment of the Text. <br /> **Possible values are:** `left`, `center`,
+    `right`{" "}
+  </td>
+</tr>
+
+<tr>
+  <td>italic</td>
+  <td>`boolean`</td>
+  <td>`-`</td>
+  <td>
+    The style of the Text. <br /> **Possible values are:** `true`{" "}
+  </td>
+</tr>
+
+<tr>
+  <td>underline</td>
+  <td>`boolean`</td>
+  <td>`-`</td>
+  <td>
+    The style of the Text. <br /> **Possible values are:** `true`{" "}
+  </td>
+</tr>
+</tbody>
+
+</table>
+
+> The `ref` is forwarded to the root element.
+
+## Default Text
+
+<Canvas of={TextStories.Default} source={{
+code:`
+import {Text} from "@open/surface-ui";
+
+export const Component = () => {
+  return <Text>Be the change you want to see in the world  - Mahatma Gandhi</Text>;
+};
+`
+}}/>
+
+## Emphasis Text
+
+<Canvas of={TextStories.Emphasis} source={{
+code:`
+import {Text} from "@open/surface-ui";
+
+export const Component = () => {
+  return <Text emphasis="low">Be the change you want to see in the world  - Mahatma Gandhi</Text>;
+};
+`
+}}/>
+
+# Sizes
+
+## Small Text
+
+<Canvas of={TextStories.Small} source={{
+code:`
+import {Text} from "@open/surface-ui";
+
+export const Component = () => {
+  return <Text size="sm">Be the change you want to see in the world  - Mahatma Gandhi</Text>;
+};
+`
+}}/>
+
+## Base Text
+
+<Canvas of={TextStories.Base} source={{
+code:`
+import {Text} from "@open/surface-ui";
+
+export const Component = () => {
+  return <Text size="base">Be the change you want to see in the world  - Mahatma Gandhi</Text>;
+};
+`
+}}/
+
+>
+
+## Large Text
+
+<Canvas of={TextStories.Large} source={{
+code:`
+import {Text} from "@open/surface-ui";
+
+export const Component = () => {
+  return <Text size="lg">Be the change you want to see in the world  - Mahatma Gandhi</Text>;
+};
+`
+}}/>
+
+## XLarge Text
+
+<Canvas of={TextStories.XLarge} source={{
+code:`
+import {Text} from "@open/surface-ui";
+
+export const Component = () => {
+  return <Text size="xl">Be the change you want to see in the world  - Mahatma Gandhi</Text>;
+};
+`
+}}/>
+
+## XXLarge Text
+
+<Canvas of={TextStories.XXLarge} source={{
+code:`
+import {Text} from "@open/surface-ui";
+
+export const Component = () => {
+  return <Text size="2xl">Be the change you want to see in the world  - Mahatma Gandhi</Text>;
+};
+`
+}}/>
+
+## XXXLarge Text
+
+<Canvas of={TextStories.XXXLarge} source={{
+code:`
+import {Text} from "@open/surface-ui";
+
+export const Component = () => {
+  return <Text size="3xl">Be the change you want to see in the world  - Mahatma Gandhi</Text>;
+};
+`
+}}/>
+
+# Width
+
+## Thin Text
+
+<Canvas of={TextStories.Thin} source={{
+code:`
+import {Text} from "@open/surface-ui";
+
+export const Component = () => {
+  return <Text width="thin">Be the change you want to see in the world  - Mahatma Gandhi</Text>;
+};
+`
+}}/>
+
+## Normal Text
+
+<Canvas of={TextStories.Normal} source={{
+code:`
+import {Text} from "@open/surface-ui";
+
+export const Component = () => {
+  return <Text width="normal">Be the change you want to see in the world  - Mahatma Gandhi</Text>;
+};
+`
+}}/>
+
+## Medium Text
+
+<Canvas of={TextStories.Medium} source={{
+
+code:`
+import {Text} from "@open/surface-ui";
+
+export const Component = () => {
+  return <Text width="medium">Be the change you want to see in the world  - Mahatma Gandhi</Text>;
+};
+`
+}}/>
+
+## Semibold Text
+
+<Canvas of={TextStories.Semibold} source={{
+code:`
+import {Text} from "@open/surface-ui";
+
+export const Component = () => {
+  return <Text width="semibold">Be the change you want to see in the world  - Mahatma Gandhi</Text>;
+};
+`
+}}/>
+
+## Bold Text
+
+<Canvas of={TextStories.Bold} source={{
+code:`
+
+import { Text } from "@open/surface-ui";
+
+export const Component = () => {
+  return <Text width="bold">Be the change you want to see in the world  - Mahatma Gandhi</Text>;
+};
+`
+}}/>
+
+## Black Text
+
+<Canvas of={TextStories.Black} source={{
+code:`
+import {Text} from "@open/surface-ui";
+
+export const Component = () => {
+  return <Text width="black">Be the change you want to see in the world  - Mahatma Gandhi</Text>;
+};
+`
+}}/>
+
+# Alignment
+
+## Left Text
+
+<Canvas of={TextStories.Left} source={{
+code:`
+
+import { Text } from "@open/surface-ui";
+
+export const Component = () => {
+  return <Text align="left">Be the change you want to see in the world  - Mahatma Gandhi</Text>;
+};
+`
+}}/>
+
+## Center Text
+
+<Canvas of={TextStories.Center} source={{
+code:`
+import {Text} from "@open/surface-ui";
+
+export const Component = () => {
+  return <Text align="center">Be the change you want to see in the world  - Mahatma Gandhi</Text>;
+};
+`
+}}/>
+
+## Right Text
+
+<Canvas of={TextStories.Right} source={{
+code:`
+import {Text} from "@open/surface-ui";
+
+export const Component = () => {
+  return <Text align="right">Be the change you want to see in the world  - Mahatma Gandhi</Text>;
+};
+`
+}}/>
+
+# Styles
+
+## Italic Text
+
+<Canvas of={TextStories.Italic} source={{
+code:`
+import {Text} from "@open/surface-ui";
+
+export const Component = () => {
+  return <Text italic>Be the change you want to see in the world  - Mahatma Gandhi</Text>;
+};
+`
+}}/>
+
+## Underline Text
+
+<Canvas of={TextStories.Underline} source={{
+code:`
+import {Text} from "@open/surface-ui";
+
+export const Component = () => {
+  return <Text underline>Be the change you want to see in the world  - Mahatma Gandhi</Text>;
+};
+`
+}}/>
