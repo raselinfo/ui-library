@@ -1,0 +1,20 @@
+import { Meta, Canvas } from "@storybook/blocks";
+import * as InputStories from "./index.stories";
+
+<Meta title="Components/Input" of={InputStories} />
+
+# Input
+
+## Default Text
+
+## Black Text
+
+<Canvas of={InputStories.Default} source={{
+code:`
+import {Input} from "@open/surface-ui";
+
+export const Component = () => {
+  return <Input placeholder="Enter your name" />;
+};
+`
+}}/>
