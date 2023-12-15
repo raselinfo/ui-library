@@ -23,5 +23,33 @@ type InputStory = typeof meta;
 export const Default: InputStory = {
   args: {
     placeholder: "Enter your name",
+    type: "text",
+  },
+};
+
+export const Number: InputStory = {
+  args: {
+    placeholder: "Enter your age",
+    type: "number",
+  },
+};
+
+export const Date: InputStory = {
+  args: {
+    type: "Date",
+  },
+};
+
+export const Time: InputStory = {
+  args: {
+    type: "Time",
+    defaultValue: "12:00",
+  },
+};
+
+export const Color: InputStory = {
+  args: {
+    type: "Color",
+    defaultValue: "#000000",
   },
 };
